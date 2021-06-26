@@ -1,0 +1,4 @@
+name: Bits For Bump
+version: ${project.version}
+main: com.elunar.bitsforbump.BitsForBump
+api-version: 1.17
