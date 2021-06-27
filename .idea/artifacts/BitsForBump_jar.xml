@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BitsForBump:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BitsForBump_jar</output-path>
+    <root id="archive" name="BitsForBump.jar">
+      <element id="module-output" name="bits-for-bump" />
+      <element id="library" level="project" name="DiscordSRV-Build-1.23.0" />
+    </root>
+  </artifact>
+</component>

@@ -65,7 +65,10 @@
             <id>Scarsz-Nexus</id>
             <url>https://nexus.scarsz.me/content/groups/public/</url>
         </repository>
-
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -79,6 +82,12 @@
             <groupId>com.discordsrv</groupId>
             <artifactId>discordsrv</artifactId>
             <version>1.22.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.MilkBowl</groupId>
+            <artifactId>VaultAPI</artifactId>
+            <version>1.7</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

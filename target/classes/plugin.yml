@@ -1,5 +1,5 @@
 name: BitsForBump
-version: ${project.version}
+version: 1.0-SNAPSHOT
 main: com.elunar.bitsforbump.BitsForBump
 api-version: 1.17
 depend: [DiscordSRV, Vault]
