@@ -10,13 +10,15 @@ public final class BitsForBump extends JavaPlugin {
 
     private DiscordSRVListener discordsrvListener = new DiscordSRVListener(this);
 
-    public static Economy eco;
+    public DataManager dataManager;
+
+    public Economy eco;
 
 
     @Override
     public void onEnable() {
 
-
+        dataManager = new DataManager(this);
 
         DiscordSRV.api.subscribe(discordsrvListener);
 
@@ -28,6 +30,14 @@ public final class BitsForBump extends JavaPlugin {
             RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
             if (rsp != null){
                 eco = rsp.getProvider();
+            }
+
+        }
+
+
+        if (!getDataFolder().exists()) {
+            if (getDataFolder().mkdirs()) {
+                getLogger().info("Data dir was created.");
             }
         }
 
