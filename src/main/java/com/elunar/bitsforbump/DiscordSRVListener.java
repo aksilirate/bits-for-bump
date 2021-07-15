@@ -32,7 +32,7 @@ public class DiscordSRVListener {
                 if (uuid != null) {
                     Integer playerBumps = bitsForBump.dataManager.getYamlPlayerBumps(user.getId());
                     String playerName = bitsForBump.getServer().getOfflinePlayer(uuid).getName();
-                    textChannel.sendMessage("Thanks for attempting to bump, you have gained ***1✦***.").queue();
+                    textChannel.sendMessage("Thanks for attempting to bump, you have gained **1✦**.").queue();
                     bitsForBump.eco.depositPlayer(playerName, 1.0);
                     bitsForBump.dataManager.setYamlPlayerBumps(user.getId(), playerBumps + 1);
                 } else {
@@ -43,7 +43,12 @@ public class DiscordSRVListener {
 
         if (event.getMessage().getContentRaw().startsWith("/bumps")) {
             Integer playerBumps = bitsForBump.dataManager.getYamlPlayerBumps(user.getId());
-            textChannel.sendMessage("You have bumped ***" + Integer.toString(playerBumps) + "*** times.").queue();
+            if (playerBumps == 1){
+                textChannel.sendMessage("You have bumped the server **1** time.").queue();
+            }else{
+                textChannel.sendMessage("You have bumped the server **" + Integer.toString(playerBumps) + "** times.").queue();
+            }
+
 
 
         }
