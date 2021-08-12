@@ -14,7 +14,7 @@ public class DataManager {
 
 
     public void setYamlPlayerBumps(String discordID, Integer playerBumps) {
-        File file = new File(bitsForBump.getDataFolder(), discordID + ".yml");
+        File file = new File(bitsForBump.getDataFolder() + "/player-data", discordID + ".yml");
         YamlConfiguration yaml_file = YamlConfiguration.loadConfiguration(file);
 
         yaml_file.set("player_bumps", playerBumps);
@@ -27,7 +27,7 @@ public class DataManager {
 
     @SuppressWarnings("unused")
     public Integer getYamlPlayerBumps(String discordID) {
-        File file = new File(bitsForBump.getDataFolder(), discordID + ".yml");
+        File file = new File(bitsForBump.getDataFolder() + "/player-data", discordID + ".yml");
         YamlConfiguration yaml_file = YamlConfiguration.loadConfiguration(file);
 
         if (!yaml_file.contains("player_bumps")) {
