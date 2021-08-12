@@ -58,7 +58,7 @@ public class UpdateLeaderboard extends BukkitRunnable {
                 break;
             }
 
-            int place = 10 - leaderboardSize;
+            int place = (leaderboardSize - leaderboardCounter) + 1;
 
             String discordUID = ((Map.Entry<String, Integer>) sortedBumps).getKey();
             String discordMention = "<@" + discordUID + ">";
@@ -66,7 +66,7 @@ public class UpdateLeaderboard extends BukkitRunnable {
 
 
 
-            message = message + "> `" + place + ".'" + discordMention + "`: " + Integer.toString(bumps) + " bumps`\n";
+            message = message + "> " + place + ". " + discordMention + ": " + Integer.toString(bumps) + " bumps\n";
 
             leaderboardCounter -= 1;
 
