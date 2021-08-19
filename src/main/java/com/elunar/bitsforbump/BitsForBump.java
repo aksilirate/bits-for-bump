@@ -17,7 +17,7 @@ public final class BitsForBump extends JavaPlugin {
 
     public DataManager dataManager;
 
-    public Economy eco;
+    public Economy economy;
 
 
     @Override
@@ -32,17 +32,23 @@ public final class BitsForBump extends JavaPlugin {
         saveConfig();
 
 
+
         if (!setupEconomy() ) {
             System.out.println("Disabled due to no Vault dependency found!");
             getServer().getPluginManager().disablePlugin(this);
             return;
-        }else{
-            RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
-            if (rsp != null){
-                eco = rsp.getProvider();
-            }
-
         }
+
+
+        RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+        if (rsp != null){
+            economy = rsp.getProvider();
+        }
+
+
+        getServer().getPluginManager().registerEvents(new EventListener(this), this);
+
+
 
 
         DiscordSRV.api.subscribe(discordsrvListener);

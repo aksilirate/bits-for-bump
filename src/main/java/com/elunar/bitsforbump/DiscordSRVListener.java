@@ -35,7 +35,7 @@ public class DiscordSRVListener {
                     Integer playerBumps = bitsForBump.dataManager.getYamlPlayerBumps(user.getId());
                     OfflinePlayer offlinePlayer = bitsForBump.getServer().getOfflinePlayer(uuid);
                     textChannel.sendMessage("Thanks for attempting to bump, you have gained **1✦**.").queue();
-                    bitsForBump.eco.depositPlayer(offlinePlayer, 1.0);
+                    bitsForBump.economy.depositPlayer(offlinePlayer, 1.0);
                     bitsForBump.dataManager.setYamlPlayerBumps(user.getId(), playerBumps + 1);
                 } else {
                     event.getChannel().sendMessage("**Your account is not linked.**").queue();

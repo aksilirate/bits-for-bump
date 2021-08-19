@@ -64,7 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../player-playtime" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../public-stash" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24712643" />
@@ -121,10 +121,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="506" y="176" key="FileChooserDialogImpl" timestamp="1628754772856">
+    <state x="506" y="176" key="FileChooserDialogImpl" timestamp="1629382235554">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="506" y="176" key="FileChooserDialogImpl/1600.0.1280.700/0.0.1600.870@0.0.1600.870" timestamp="1628754772856" />
+    <state x="506" y="176" key="FileChooserDialogImpl/1600.0.1280.700/0.0.1600.870@0.0.1600.870" timestamp="1629382235554" />
     <state x="2005" y="142" key="FileChooserDialogImpl/1600.0.1280.700/0.0.1600.870@1600.0.1280.700" timestamp="1624783024043" />
     <state x="1651" y="0" key="SettingsEditor" timestamp="1624777555711">
       <screen x="1600" y="0" width="1280" height="700" />
